@@ -15,6 +15,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    OrderStatusUpdated::dispatch('Iphone');
     return view('welcome');
+});
+Route::get('/emit-event', function () {
+    OrderStatusUpdated::dispatch('Iphone');
 });
